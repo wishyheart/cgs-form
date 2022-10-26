@@ -1,0 +1,184 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>Comprehensive Geriatric Screening</title>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>  
+  <link rel="stylesheet" href="draft1.css">
+</head>  
+<body>  
+      
+<div class="container">
+		<div class="navigation-bar">
+			<ul>
+				<li><a href="#">User</a></li>
+				<li><a href="#">Patient Lists</a></li>
+				<li><a href="draft1.html">Add Patient</a></li>
+				<li><a href="DBdraft.html">Dashboard</a></li>
+			</ul>
+		</div>
+    <form action="#">
+    <h1>Schedule your Appointment</h1>
+    <br>
+	<form action="appointment-list">     
+		<div class="fields">
+			<div class="input-field"> 
+				<label>Name</label>  
+				<input type="text" name="name" class="form-control" value="">  
+			</div>  
+      
+			<div class="input-field"> 
+				<label>Phone Number</label>  
+				<input type="tel" name="email" class="form-control" value="">  
+			</div>  
+			
+			<div class="input-field"> 
+				<label>Appointment Date</label>  
+				<input type="date" name="date" class="form-control" value="">  
+			</div>  
+			
+			<div class="input-field"> 
+				<label>Appointment Time</label>  
+				<input type="time" name="time" class="form-control" value="">  
+			</div>
+        </div>
+				<button type="submit" class="save-btn">Submit</button>  
+        <br>
+        <div class="patient-list">
+	       <table class="table table-bordered data-table">  
+                <tr>
+			       <th>Name</th>  
+			       <th>Phone Number</th>  
+			       <th>Appointment Date</th>
+			       <th>Appointment Time</th>
+			       <th>Reschedule / Edit</th>
+                   <th>Reschedule / Edit</th>
+                </tr>
+            </table> 
+        </div>
+   </form> 
+    <!-- disease condition section start -->
+    	<hr>
+    <form class="diseases-condition" id="diseases-condition">
+        <div class="max-width">
+            <div class="diseases-content">
+                <div class="column left">
+					<div class="main-title">Diseases and Conditions</div>
+						<span class="sub-title">Know the top medical prescription drugs and surgery in the Philippines</span>
+                </div>
+                <div class="column right">
+					 <span class="right-column-feautured-title">Top 10 Prescription Drugs</span>
+						<ol class="content-list">
+							<li><a href="#">Hydrocone</a>
+							<li><a href="#">Metformin</a>
+							<li><a href="#">Losartan</a>
+							<li><a href="#">Antibiotics</a>
+							<li><a href="#">Albuterol</a>
+							<li><a href="#">Gabapentin</a>
+							<li><a href="#">Omeprazole</a>
+							<li><a href="#">Lovethyroxine</a>
+							<li><a href="#">Atorvastatin</a>
+						</ol>
+						</br>
+						</br>
+					<span class="right-column-feautured-title">Featured Topics</span>
+						<ol class="content-list">
+							<li><a href="#">Hemodialysis</li>
+							<li><a href="#">Vaginal Delivery</li>
+							<li><a href="#">Cesarian Delivery</li>
+							<li><a href="#">Cataract Removal w/ Intraocular lens insertion</li>
+							<li><a href="#">Chemotherapy</li>
+							<li><a href="#">Surgical completion of incomplete abortion</li>
+							<li><a href="#">Upper gastrointestinal endoscopy</li>
+							<li><a href="#">Chelocystectomy</li>
+							<li><a href="#">Colonoscopy</li>
+							<li><a href="#">Dilation and curretage</li>
+						</ol>
+						<a href="#" class="button-more">
+							<span class="more-featured">See more diseases and conditions</span>
+							<i class="fa-regular fa-arrow-right"></i></a>			
+                </div>
+            </div>
+			<hr>
+        </div>
+    </div>
+    </form>  
+</div>
+<script>  
+     
+    $("form").submit(function(e){  
+        e.preventDefault();  
+        var name = $("input[name='name']").val();  
+        var email = $("input[name='email']").val();  
+		var date = $("input[name='date']").val();
+		var time = $("input[name='time']").val();
+       
+        $(".data-table tbody").append("<tr data-name='"+name+"' data-email='"+email+"' data-date='"+date+"' data-time='"+time+"'><td>"+name+"</td><td>"+email+"</td><td>"+date+"</td><td>"+time+"</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete'>Delete</button></td></tr>");  
+      
+        $("input[name='name']").val('');  
+        $("input[name='email']").val('');  
+        $("input[name='date']").val('');  
+        $("input[name='time']").val(''); 
+    });  
+     
+    $("body").on("click", ".btn-delete", function(){  
+        $(this).parents("tr").remove();  
+    });  
+      
+    $("body").on("click", ".btn-edit", function(){  
+        var name = $(this).parents("tr").attr('data-name');  
+        var email = $(this).parents("tr").attr('data-email');
+		var date = $(this).parents("tr").attr('data-date');
+	    var time = $(this).parents("tr").attr('data-time');
+      
+        $(this).parents("tr").find("td:eq(0)").html('<input name="edit_name" value="'+name+'">');  
+        $(this).parents("tr").find("td:eq(1)").html('<input name="edit_email" value="'+email+'">');  
+		$(this).parents("tr").find("td:eq(2)").html('<input name="edit_date" value="'+date+'">'); 
+		$(this).parents("tr").find("td:eq(3)").html('<input name="edit_time" value="'+time+'">'); 
+      
+        $(this).parents("tr").find("td:eq(5)").prepend("<button class='btn btn-info btn-xs btn-update'>Update</button><button class='btn btn-warning btn-xs btn-cancel'>Cancel</button>")  
+        $(this).hide();  
+    });  
+     
+    $("body").on("click", ".btn-cancel", function(){  
+        var name = $(this).parents("tr").attr('data-name');  
+        var email = $(this).parents("tr").attr('data-email');  
+        var date = $(this).parents("tr").attr('data-date');  
+        var time = $(this).parents("tr").attr('data-time'); 
+        
+      
+        $(this).parents("tr").find("td:eq(0)").text(name);  
+        $(this).parents("tr").find("td:eq(1)").text(email);  
+        $(this).parents("tr").find("td:eq(2)").text(date);  
+        $(this).parents("tr").find("td:eq(3)").text(time);
+     
+        $(this).parents("tr").find(".btn-edit").show();  
+        $(this).parents("tr").find(".btn-update").remove();  
+        $(this).parents("tr").find(".btn-cancel").remove();  
+    });  
+     
+    $("body").on("click", ".btn-update", function(){  
+        var name = $(this).parents("tr").find("input[name='edit_name']").val();  
+        var email = $(this).parents("tr").find("input[name='edit_email']").val(); 
+        var date = $(this).parents("tr").find("input[name='edit_date']").val();  
+        var time = $(this).parents("tr").find("input[name='edit_time']").val(); 
+      
+        $(this).parents("tr").find("td:eq(0)").text(name);  
+        $(this).parents("tr").find("td:eq(1)").text(email);
+        $(this).parents("tr").find("td:eq(0)").text(date);  
+        $(this).parents("tr").find("td:eq(1)").text(time); 
+       
+        $(this).parents("tr").attr('data-name', name);  
+        $(this).parents("tr").attr('data-email', email);  
+        $(this).parents("tr").attr('data-name', date);  
+        $(this).parents("tr").attr('data-email', time); 
+      
+        $(this).parents("tr").find(".btn-edit").show();  
+        $(this).parents("tr").find(".btn-cancel").remove();  
+        $(this).parents("tr").find(".btn-update").remove();  
+    });  
+      
+</script>  
+       
+</body>  
+</html>  s

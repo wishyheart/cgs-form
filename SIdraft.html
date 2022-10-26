@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="SIdraft.css">
+ 
+  <!-- jQuery CDN Link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Log In</title>
+</head>
+ 
+<body>
+  <div class="container">
+    <div class="form">
+		<div class="imgcontainer">
+		<img src="cga-image/UPWISE EIDR_logo .jpg" alt="Logo" class="logo">
+		</div>
+      <div class="btn">
+        <button class="signUpBtn">Patient</button>
+        <button class="loginBtn">Staff</button></span>
+      </div>
+      <form class="signUp" action="" method="get">
+	  
+          <label>Username<span id="required">*</span></label>
+		  <input type="text" name="uname" id="uname" required>
+		  
+		  <label>Patient Number<span id="required">*</span></label>
+	      <input type="text" name="patientnumber" id="patientnumber" required>
+	
+		  <label>Password<span id="required">*</span></label>
+		  <input type="password" name="psw" id="psw" required>
+
+        <label>
+		<input type="checkbox" name="remember"> Remember me</label>
+        <span class="psw"><a href="#">Forgot password?</a></span>
+        <div class="formGroup">
+            <button type="button" class="btn2"><a href="DBdraft.html">Log In</button></a>
+        </div>
+		<span class="text">Don't have an account yet?<a href="PatientSignUp.html">Sign Up</a></span>
+ 
+      </form>
+        
+      <form class="login" action="" method="get">
+        
+		<label>Username<span id="required">*</span></label>
+		  <input type="text" name="uname">
+
+		  <label>ID Number<span id="required">*</span></label>
+	      <input type="text" name="idnumber" required>
+	
+		  <label>Password<span id="required">*</span></label>
+		  <input type="password" name="psw" required>
+		  
+        <label>
+		<input type="checkbox" name="remember"> Remember me</label>
+        <span class="psw"><a href="#">Forgot password?</a></span>
+        <div class="formGroup">
+          <button type="button" class="btn2"><a href="DBdraft.html">Log In</button></a>
+        </div>
+		<span class="text">Don't have an account yet?<a href="StaffSignUp.html">Sign Up</a></span>
+      </form>
+ 
+    </div>
+  </div>
+   <script>
+  /* Show login form on button click */
+ 
+$('.loginBtn').click(function(){
+  $('.login').show();
+  $('.signUp').hide();
+  /* border bottom on button click */
+  $('.loginBtn').css({'border-bottom' : '2px solid #ff4141'});
+  /* remove border after click */
+  $('.signUpBtn').css({'border-style' : 'none'});
+});
+ 
+ 
+/* Show sign Up form on button click */
+ 
+$('.signUpBtn').click(function(){
+  $('.login').hide();
+  $('.signUp').show();
+  /* border bottom on button click */
+  $('.signUpBtn').css({'border-bottom' : '2px solid #ff4141'});
+   /* remove border after click */
+   $('.loginBtn').css({'border-style' : 'none'});
+});</script>
+</body>
+ 
+</html>
