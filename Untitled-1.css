@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#warning {
+  color: red;
+}
+i {
+  color: #37474F;
+
+}
+body{
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+}
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+header {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	margin-top: 0;
+	background: #014421;
+	padding: 1rem;
+	color: white;
+	width: 78rem;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+.container form {
+  padding: 40px;
+	margin: 10px;
+}
+.navigation-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+    margin-bottom: 50px;
+  background-image: url(https://lh6.googleusercontent.com/_y7nnL5sg9GjwVFDi8Qzi04MDovQWtKJHYbEXhw_vD6-_IuPvmWDVqgrQzv4eLBYZPjRg7nxVAm94UkcCoW7naf8c_X0MQMZKT8NpH1MuPFs06kjJxhlRNm5-5eUTD-UrndghkvGxOeapyQ9AwBD8X4m9bwovnAugvxRfOWKOEF49VJa_YxYUIqRxpSfkOtf);
+}
+
+.navigation-bar li {
+  float: right;
+}
+.navigation-bar li a {
+  display: flex;
+  color: white;
+  text-align: left;
+  padding: 20px;
+  text-decoration: none;
+  width: 100%;
+  font-size: 15px;
+}
+.navigation-bar li a:hover{
+	color: #1d8348;
+}
+.patient-id {
+	text-align: right;
+}
+.idDetails label {
+	font-size: 14px;
+	font-weight: 500;
+	text-align: right;
+}
+#id {
+	border: 1px solid #aaa;
+}
+.component-details {
+	text-align: left;
+}
+.component-details label {
+	font-size: 14px;
+	font-weight: 500;
+}
+#components {
+	background: white;
+	border: 1px solid #B0BEC5;
+	border-radius: 5px;
+	font-size: 14px;
+	width: 15%;
+	padding: .5rem;
+}
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+.step .fields{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.step .fields .input-field{
+  display: flex;
+  width: calc(100% / 2 - 50px);
+  flex-direction: column;
+  margin: 4px 0;
+}
+.input-field label{
+  font-size: 15px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+.step .fields .input-field input[type=text], input[type=date], input[type=time], input[type=tel], select{
+	background: none;
+	outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input[type=text], input[type=date], input[type=time], input[type=tel], select{
+	background: none;
+	outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.address-details, .contact-details {
+	margin-top: 2rem;
+	font-size: 16px;
+	font-weight: 700;
+}
+.input li {
+  list-style-type: none;
+}
+.input label {
+	font-size: 17px;
+	font-weight: 600;
+  color: black;
+}
+.fields .input span {
+	margin-left: 37px;
+}
+.fields .input p {
+	margin-left: 20px;
+	font-size: 13px;
+}
+.fields .input input[type=number] {
+	border: none;
+	border-bottom: 1px solid black;
+	margin-left: 0.3rem;
+}
+.container form .buttons {
+  text-align: center;
+}
+.container form button {
+  justify-content: center;
+  height: 45px;
+  max-width: 170px;
+  width: 200px;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 15px; 
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.container form .buttons .save-btn {
+  background: #ffeb2f;
+}
+.container form .buttons .save-btn:hover{
+  background: #FFEE58;
+}
+.container form .buttons .next-btn {
+  background: #014421;
+}
+.container form .buttons .next-btn:hover {
+	background: #1d8348;
+}
+.container form .buttons .previous-btn {
+  background: #7b1113;
+}
+.container form .buttons .previous-btn:hover {
+  background: #b03a2e;
+}
+#add-btn {
+  cursor: pointer;
+}
+#radio-btn {
+	margin-top: 0.5rem;
+	margin-left: 1rem;
+	margin-right: 0.5rem;
+}
+#check-box {
+	margin-top: 0.5rem;
+	margin-left: 1rem;
+	margin-right: 0.5rem;
+}
+#duration, #height, #weight, #frequency {
+	border: none;
+	border-bottom: 1px solid black;
+	margin-left: 0.5rem;
+  outline: none;
+}
+#choices {
+  margin-left: 2rem;
+  font-size: 15px;
+}
+#type {
+  margin-left: 4.5rem;
+}
+#fourth {
+  margin-left: 3.5rem;
+}
+.table {
+	width: 80%;
+}
+.table.list {
+	width: 100%;
+}
+.td, th {
+	border: 1px solid orange;
+	text-align: left;
+	padding: 8px;
+}
+#column th {
+  text-align: center;
+  padding-left: 4rem;
+  padding-right: 2rem;
+  border: none;
+  font-size: 15px;
+  background: none;
+  color: black;
+}
+#column td {
+  font-size: 15px;
+	padding-left: 2rem;
+}
+#checkbox-align {
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+}
+#input-text {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 70%;
+  margin-left: 1rem;
+  outline: none;
+}
+#input-type {
+  font-size: 15px;
+  margin-left: 2.3rem;
+  outline: none;
+}
+#heightunits, #weightunits {
+  border: none;
+}
+#bmi-submit-btn {
+  background: maroon;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  width: 40%;
+  text-align: center;  
+}
+#image-input {
+  margin-left: 2rem;
+}
+#display-image{
+  width: 400px;
+  height: 225px;
+  border: 1px solid #9E9E9E;
+  background-position: center;
+  background-size: cover;
+  margin-left: 2rem;
+}
+#comment {
+  border: none;
+  border-bottom: 1px solid black;
+  margin-left: 0.3rem;
+  width: 100%;
+  outline: none;
+}
+#third {
+  margin-left: 1.3rem;
+  font-size: 16px;
+}
+.hide {
+	display: none;
+}
