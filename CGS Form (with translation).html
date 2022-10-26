@@ -44,9 +44,8 @@
 						<select id="components">
 							<option>Family Member</option>
 							<option>Nurse</option>
-							<option></option>
-							<option></option>
-							<option></option>
+							<option>Doctor</option>
+							<option>Caregiver</option>
 						</select>
 					</div>
 				</div>
@@ -973,6 +972,7 @@
 
 <!-- Health Third Form -->
 				<div class="step step-9">
+					<header>Health</header>
                     <div class="fields">
 						<div class="input">
 							<label>Medication History</label>
@@ -1267,7 +1267,7 @@
 
 								<label>Sleep</label>
 									<li>Overall, in the past month, have you experienced problems with sleeping such as difficulty falling asleep, waking up frequently, or waking up early?</li>
-									<li> <i>(Sa mga nakalipas na buwan, kayo po ba ay may problema sa pagtulog tulad ng hirap sa pagtulog, madalas paggising, o maagang paggising sa umaga?)</i></li>
+									<li><i>(Sa mga nakalipas na buwan, kayo po ba ay may problema sa pagtulog tulad ng hirap sa pagtulog, madalas paggising, o maagang paggising sa umaga?)</i></li>
 									<li><input type="radio" name="sleep" value="" id='radio-btn'/>Yes</li>
 									<li><input type="radio" name="sleep" value="" id='radio-btn'/>No</li>
 									<br>
@@ -1308,7 +1308,7 @@
                             </select>
 						</div>
 						<div class="input-components">
-							<label>Relationship to Patient <i>(Relasyon sa Pasyente)<span id="required">*</span></label>
+							<label>Relationship to Patient <i>(Relasyon sa Pasyente)</i><span id="required">*</span></label>
 								<select id="components">
 									<option>Family Member</option>
 									<option>Nurse</option>
@@ -1320,189 +1320,191 @@
 					</div>
 					<header>Review of Section</header>
 					<div class="fields">
-						<div class="input">
-							 <label>General</label>
-								<li>In the past 3 months, have you experienced the following?</li>
-								<li><input type="checkbox" name="general"id='check-box' onclick="show51();"/>Weight Gain</li>
-								<div id="div51" class="hide">
-									<span>Number of Kilogram/s gained:<input type="text" id="duration">kg</span>
-								</div>
-								<li><input type="checkbox" name="general" id='check-box' onclick="show52();"/>Weight Loss</li>
-								<div id="div52" class="hide">
-									<span>Number of Kilogram/s lost:<input type="text" id="duration">kg</span>
-								</div>
-								<li><input type="checkbox" name="general" id='check-box'>Fatigue</li>
-								<li><input type="checkbox" name="general" id='check-box'>Fever</li>
-								<li><input type="checkbox" name="general" id='check-box'>Loss of Appetite</li>
-								<li><input type="checkbox" name="general" id='check-box'>None</li>
-								<li><input type="checkbox" name="general" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-								
-							<label>Gastrointestinal</label>
-								<li>In the past 3 months, have you experiened the following?</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Dental Carries</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Dentures</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Edentulous</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Dysphagia</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Odynophagia</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Nausea</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Vomiting</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Hematemesis</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Loss of Taste</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Abdominal Pain</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Constipation</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Diarrhea</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Incontinence</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Melena</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Hematochezia</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Hemorrhoids</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>None</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
+					  <div class="input">
+						 <label>General</label>
+						  <li>In the past 3 months, have you experienced the following? <i>(Sa nakalipas na tatlong buwan, kayo po ba ay nakaranas ng..)</i></li>
+						  <li><input type="checkbox" name="general"id='check-box' onclick="show51();"/>Weight Gain <i>(Pagbigat ng timbang)</i></li>
+						  <div id="div51" class="hide">
+							<span>Number of Kilogram/s gained <i>(Timbang na nadagdag)</i>:<input type="text" id="duration">kg</span>
+						  </div>
+						  <li><input type="checkbox" name="general" id='check-box' onclick="show52();"/>Weight Loss <i>(Pagbaba ng timbang)</i></li>
+						  <div id="div52" class="hide">
+							<span>Number of Kilogram/s lost <i>(Timbang na nabawas)</i>:<input type="text" id="duration">kg</span>
+						  </div>
+						  <li><input type="checkbox" name="general" id='check-box'>Fatigue <i>(Pagod)</i></li>
+						  <li><input type="checkbox" name="general" id='check-box'>Fever <i>(Lagnat)</i></li>
+						  <li><input type="checkbox" name="general" id='check-box'>Loss of Appetite <i>(Kawalan ng ganang kumain)</i></li>
+						  <li><input type="checkbox" name="general" id='check-box'>None <i>(Wala)</i></li>
+						  <li><input type="checkbox" name="general" id='check-box'>Other <i>(Iba pa):</i><input type="text" id="duration"></li>
+						  <br>
+						  
+						  <li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+						  <br>
+						  
+						<label>Gastrointestinal</label>
+						  <li>In the past 3 months, have you experiened the following?</li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Dental Carries <i>(Dental karis o may sira ang ngipin)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Dentures <i>(may pustiso)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Edentulous <i>(wala ng ngipin)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Dysphagia <i>(Hirap na paglunok o nasasamid)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Odynophagia <i>(Masakit ang paglunok)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Nausea <i>(Naduduwal)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Vomiting <i>(Pagsusuka)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Hematemesis <i>(Pagsuka ng dugo)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Loss of Taste <i>(Walang lasa sa pagkain)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Abdominal Pain <i>(Sakit ng tiyan)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Constipation <i>(Nagtitibi)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Diarrhea <i>(Nagtatae)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Incontinence <i>(Hindi mapigilan and pagdumi)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Melena <i>(Maitim na dumi)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Hematochezia <i>(May dugo sa dumi)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Hemorrhoids <i>(Almoranas)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>None <i>(Wala)</i></li>
+						  <li><input type="checkbox" name="gasterointestinal" id='check-box'>Other <i>(Iba pa):</i><input type="text" id="duration"></li>
+						  <br>
+						  
+						  <li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+						  <br>
+						
+						<label>Pulmonary</label>
+						  <li>In the past 3 months, have you experiened the following?</li>
+						  <li><input type="checkbox" name="Pulmonary" id='check-box'>Cough <i>(Ubo)</i></li>
+						  <li><input type="checkbox" name="Pulmonary" id='check-box'>Difficulty Breathing <i>(Hirap sa paghinga)</i></li>
+						  <li><input type="checkbox" name="Pulmonary" id='check-box'>Shortness of Breath <i>(Hingal)</i></li>
+						  <li><input type="checkbox" name="Pulmonary" id='check-box'>None <i>(Wala)</i></li>
+						  <li><input type="checkbox" name="Pulmonary" id='check-box'>Other <i>(Iba pa):</i><input type="text" id="duration"></li>
+						  <br>
+						  
+						  <li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+						  <br>
+						  
+						<label>Genitourinary</label>
+						  <li>In the past 3 months, have you experiened the following? <i></i></li>
+						  <li><input type="checkbox" name="genitourinary" id='check-box'>Dysuria <i>(Hapdi o sakit sa pag-ihi)</i></li>
+						  <li><input type="checkbox" name="genitourinary" id='check-box'>Frequency <i>(Madalas umihi)</i></li>
+						  <li><input type="checkbox" name="genitourinary" id='check-box'>Bleeding <i>(May pagdurugo)</i></li>
+						  <li><input type="checkbox" name="genitourinary" id='check-box'>Incontinence <i>(Hindi mapigilan ang pag-ihi)</i></li>
+						  <li><input type="checkbox" name="genitourinary" id='check-box'>Dribbling <i>(Paunti-unting pag-ihi)</i></li>
+						  <li><input type="checkbox" name="genitourinary" id='check-box'>Nocturia <i>(Madalas magising sa gabi para umiihi)</i></li>
+						  <li><input type="checkbox" name="genitourinary" id='check-box'>Discharge <i>(May lumalabas sa ari)</i></li>
+						  <li><input type="checkbox" name="genitourinary" id='check-box'>None <i>(Wala)</i></li>
+						  <li><input type="checkbox" name="genitourinary" id='check-box'>Other <i>(Iba pa):</i><input type="text" id="duration"></li>
+						  <br>
+						  
+						  <li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+						  <br>
+						  
+						<label>Sexual</label>
+						  <li><input type="radio" name="sexual" id='radio-btn' onclick="show53();"/>Male</li>
+						  <div id="div53" class="hide">
+						  <li>You may choose not to answer the following questions on sexual activity.</li>
+						  <li><i>(Maaring hindi ninyo po sagutan ang mga sumusunod na tanong tungkol sa pagtatalik)</i></li>
+							<table id="column">
+							  <tr>
+								<th>Sexual History Questions</th>
+								<th>Yes</th>
+								<th>No</th>
+								<th>Prefer Not to Answer</th>
+								<th>Not Applicable</th>
+							  </tr>
+							  <tr>
+								<td>Do you engage in sexual activity? <i>(Kayo po ba ay nakikipagtalik)?</i></td>
+								<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
+							  </tr>
+							  <tr>
+								<td>Do you have problem with erection? <i>(Mayroon po bang problema sa pagtigas ng ari)?</i></td>
+								<td align="center"><input type="radio" name="erection-problem" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="erection-problem" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="erection-problem" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="erection-problem" value="" id='radio-btn'/></td>
+							  </tr>
+							  <tr>
+								<td>Do you have sex with multiple partners? <i>(Kayo po ba ay nakikipagtalik ng mahigit sa isang tao)?</i></td>
+								<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
+							  </tr>
+							  <tr>
+								<td>Do you engage in safe sex? <i>(Kayo po ba ay nakikipagtalik ng may pag-iingat)?</i></td>
+								<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn' onclick="show54();"/></td>
+								<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
+							  </tr>
+							</table>
+							<div id="div54" class="hide">
+							  <p id="checkbox-align">If you engaged in safe sex, what do you use? <i>(Kung Oo, ano po ang inyong ginagamit)?</i></p>
+							  <p id="checkbox-align"><input type="checkbox" name="safe-sex" value="" id='check-box'/>Condom</p>
+							  <p id="checkbox-align"><input type="checkbox" name="safe-sex" value="" id='check-box'/>None</p>
+							  <p id="checkbox-align"><input type="checkbox" name="safe-sex" value="" id='check-box'/>Other:<input type="text" id="duration"></p>
+							</div>
+						  </div>
 							
-							<label>Pulmonary</label>
-								<li>In the past 3 months, have you experiened the following?</li>
-								<li><input type="checkbox" name="Pulmonary" id='check-box'>Cough</li>
-								<li><input type="checkbox" name="Pulmonary" id='check-box'>Difficulty Breathing</li>
-								<li><input type="checkbox" name="Pulmonary" id='check-box'>Shortness of Breath</li>
-								<li><input type="checkbox" name="Pulmonary" id='check-box'>None</li>
-								<li><input type="checkbox" name="gasterointestinal" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-								
-							<label>Genitourinary</label>
-								<li>In the past 3 months, have you experiened the following?</li>
-								<li><input type="checkbox" name="genitourinary" id='check-box'>Dysuria</li>
-								<li><input type="checkbox" name="genitourinary" id='check-box'>Frequency</li>
-								<li><input type="checkbox" name="genitourinary" id='check-box'>Bleeding</li>
-								<li><input type="checkbox" name="genitourinary" id='check-box'>Incontinence</li>
-								<li><input type="checkbox" name="genitourinary" id='check-box'>Dribbling</li>
-								<li><input type="checkbox" name="genitourinary" id='check-box'>Nocturia</li>
-								<li><input type="checkbox" name="genitourinary" id='check-box'>Discharge</li>
-								<li><input type="checkbox" name="genitourinary" id='check-box'>None</li>
-								<li><input type="checkbox" name="genitourinary" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-								
-							<label>Sexual</label>
-								<li><input type="radio" name="sexual" id='radio-btn' onclick="show53();"/>Male</li>
-								<div id="div53" class="hide">
-								<li>You may choose not to answer the following questions on sexual activity.</li>
-									<table id="column">
-										<tr>
-											<th>Sexual History Questions</th>
-											<th>Yes</th>
-											<th>No</th>
-											<th>Prefer Not to Answer</th>
-											<th>Not Applicable</th>
-										</tr>
-										<tr>
-											<td>Do you engage in sexual activity?</td>
-											<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
-										</tr>
-										<tr>
-											<td>Do you have problem with erection?</td>
-											<td align="center"><input type="radio" name="erection-problem" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="erection-problem" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="erection-problem" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="erection-problem" value="" id='radio-btn'/></td>
-										</tr>
-										<tr>
-											<td>Do you have sex with multiple partners?</td>
-											<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
-										</tr>
-										<tr>
-											<td>Do you engage in safe sex?</td>
-											<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn' onclick="show54();"/></td>
-											<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
-										</tr>
-									</table>
-									<div id="div54" class="hide">
-										<p>If you engaged in safe sex, what do you use?</p>
-										<p><input type="checkbox" name="safe-sex" value="" id='checkbox'/>Condom</p>
-										<p><input type="checkbox" name="safe-sex" value="" id='checkbox'/>None</p>
-										<p><input type="checkbox" name="safe-sex" value="" id='checkbox'/>Other:<input type="text" id="duration"></p>
-									</div>
-								</div>
-									
-								<li><input type="radio" name="sexual" id='radio-btn' onclick="show55();"/>Female</li>
-								<div id="div55" class="hide">
-								<li>You may choose not to answer the following questions on sexual activity.</li>
-									<table id="column">
-										<tr>
-											<th>Sexual History Questions</th>
-											<th>Yes</th>
-											<th>No</th>
-											<th>Prefer Not to Answer</th>
-											<th>Not Applicable</th>
-										</tr>
-										<tr>
-											<td>Do you engage in sexual activity?</td>
-											<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
-										</tr>
-										<tr>
-											<td>Do you have problem with sexual intercourse?</td>
-											<td align="center"><input type="radio" name="sexual-intercourse-problem" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="sexual-intercourse-problem" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="sexual-intercourse-problem" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="sexual-intercourse-problem" value="" id='radio-btn'/></td>
-										</tr>
-										<tr>
-											<td>Do you feel any pain during the intercourse?</td>
-											<td align="center"><input type="radio" name="pain-during-intercourse" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="pain-during-intercourse" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="pain-during-intercourse" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="pain-during-intercourse" value="" id='radio-btn'/></td>
-										</tr>
-										<tr>
-											<td>Do you have sex with multiple partners?</td>
-											<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
-										</tr>
-										<tr>
-											<td>Do you engage in safe sex?</td>
-											<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn' onclick="show56();"/></td>
-											<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
-											<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
-										</tr>
-									</table>
-									<div id="div56" class="hide">
-										<p>If you engaged in safe sex, what do you use?</p>
-										<p><input type="checkbox" name="safe-sex" value="" id='checkbox'/>Condom</p>
-										<p><input type="checkbox" name="safe-sex" value="" id='checkbox'/>Intrauterine Device (IUD)</p>
-										<p><input type="checkbox" name="safe-sex" value="" id='checkbox'/>Birth Control Pill</p>
-										<p><input type="checkbox" name="safe-sex" value="" id='checkbox'/>Other:<input type="text" id="duration"></p>
-									</div>
-								</div>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-						</div>
+						  <li><input type="radio" name="sexual" id='radio-btn' onclick="show55();"/>Female</li>
+						  <div id="div55" class="hide">
+						  <li>You may choose not to answer the following questions on sexual activity.</li>
+						  <li><i>(Maaring hindi ninyo po sagutan ang mga sumusunod na tanong tungkol sa pagtatalik)</i></li>
+							<table id="column">
+							  <tr>
+								<th>Sexual History Questions</th>
+								<th>Yes</th>
+								<th>No</th>
+								<th>Prefer Not to Answer</th>
+								<th>Not Applicable</th>
+							  </tr>
+							  <tr>
+								<td>Do you engage in sexual activity? <i>(Kayo po ba ay nakikipagtalik)?</i></td>
+								<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="engaged-sexual-activity" value="" id='radio-btn'/></td>
+							  </tr>
+							  <tr>
+								<td>Do you have problem with sexual intercourse? <i>(Mayroon po bang problema tuwing nakikipagtalik)?</i></td>
+								<td align="center"><input type="radio" name="sexual-intercourse-problem" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="sexual-intercourse-problem" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="sexual-intercourse-problem" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="sexual-intercourse-problem" value="" id='radio-btn'/></td>
+							  </tr>
+							  <tr>
+								<td>Do you feel any pain during the intercourse? <i>(Nakakaramdam po ba kayo ng sakit tuwing nakikipagtalik)?</i></td>
+								<td align="center"><input type="radio" name="pain-during-intercourse" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="pain-during-intercourse" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="pain-during-intercourse" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="pain-during-intercourse" value="" id='radio-btn'/></td>
+							  </tr>
+							  <tr>
+								<td>Do you have sex with multiple partners? <i>(Kayo po ba ay nakikipagtalik ng mahigit sa isang tao)?</i></td>
+								<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="multiple-partners" value="" id='radio-btn'/></td>
+							  </tr>
+							  <tr>
+								<td>Do you engage in safe sex? <i>(Kayo po ba ay nakikipagtalik ng may pag-iingat)?</i></td>
+								<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn' onclick="show56();"/></td>
+								<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
+								<td align="center"><input type="radio" name="safe-sex" value="" id='radio-btn'/></td>
+							  </tr>
+							</table>
+							<div id="div56" class="hide">
+							  <p id="checkbox-align">If you engaged in safe sex, what do you use? <i>(Kung Oo, ano po ang inyong ginagamit)?</i></p>
+							  <p id="checkbox-align"><input type="checkbox" name="safe-sex" value="" id='check-box'/>Condom</p>
+							  <p id="checkbox-align"><input type="checkbox" name="safe-sex" value="" id='check-box'/>Intrauterine Device (IUD)</p>
+							  <p id="checkbox-align"><input type="checkbox" name="safe-sex" value="" id='check-box'/>Birth Control Pill</p>
+							  <p id="checkbox-align"><input type="checkbox" name="safe-sex" value="" id='check-box'/>Other:<input type="text" id="duration"></p>
+							</div>
+						  </div>
+						  <br>
+						  
+						  <li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+						  <br>
+					  </div>
 					</div>
 					<div class="buttons">
 						<button type="button" class="previous-btn">Back Page</button>
@@ -1515,263 +1517,263 @@
 				<div class="step step-11">
 					<header>Review of Section</header>
 					<div class="fields">
-						<div class="input">
-							 <label>Psychiatric</label>
-								<li>In the past 3 months, have you experienced the following?</li>
-								<li><input type="checkbox" name="psychiatric" id='check-box'>Confusion</li>
-								<li><input type="checkbox" name="psychiatric" id='check-box'>Memory Loss</li>
-								<li><input type="checkbox" name="psychiatric" id='check-box'>Wandering</li>
-								<li><input type="checkbox" name="psychiatric" id='check-box'>Depression</li>
-								<li><input type="checkbox" name="psychiatric" id='check-box'>Anxiety</li>
-								<li><input type="checkbox" name="psychiatric" id='check-box'>Agitation</li>
-								<li><input type="checkbox" name="psychiatric" id='check-box'>Paranoia</li>
-								<li><input type="checkbox" name="psychiatric" id='check-box'>None</li>
-								<li><input type="checkbox" name="psychiatric" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-								
-							<label>Neurologic</label>
-								<li><input type="checkbox" name="neurologic" id='check-box'>Syncope</li>
-								<li><input type="checkbox" name="neurologic" id='check-box'>Tremors</li>
-								<li><input type="checkbox" name="neurologic" id='check-box'>Paralysis</li>
-								<li><input type="checkbox" name="neurologic" id='check-box'>Numbness</li>
-								<li><input type="checkbox" name="neurologic" id='check-box'>Bradykinesia</li>
-								<li><input type="checkbox" name="neurologic" id='check-box' onclick="show57();"/>Pasma</li>
-								<div id="div57" class="hide">
-									<span>Describe Experience:<input type="text" id="duration"></span>
+					  <div class="input">
+						<label>Psychiatric</label>
+							<li>In the past 3 months, have you experienced the following? <i>(Sa nakalipas na tatlong buwan, kayo po ba ay nakaranas ng..)</i></li>
+							<li><input type="checkbox" name="psychiatric" id='check-box'>Confusion <i>(Nagugulumihanan)</i></li>
+							<li><input type="checkbox" name="psychiatric" id='check-box'>Memory Loss <i>(Pagkalimot)</i></li>
+							<li><input type="checkbox" name="psychiatric" id='check-box'>Wandering <i>(Pagala-gala o napunta sa ibang lugar ng hindi alam kung papaano makabalik)</i></li>
+										<li><input type="checkbox" name="psychiatric" id='check-box'>Depression <i>(Nakakramdam ng kalungkutan)</i></li>
+										<li><input type="checkbox" name="psychiatric" id='check-box'>Anxiety <i>(Kaba o nerbiyos)</i></li>
+										<li><input type="checkbox" name="psychiatric" id='check-box'>Agitation <i>(Pagkataranta)</i></li>
+										<li><input type="checkbox" name="psychiatric" id='check-box'>Paranoia <i>{ Paranoia (Lubos na paghihinala)</i></li>
+										<li><input type="checkbox" name="psychiatric" id='check-box'>None <i>(Wala)</i></li>
+										<li><input type="checkbox" name="psychiatric" id='check-box'>Other <i>(Iba pa):</i><input type="text" id="duration"></li>
+										<br>
+										
+										<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+										<br>
+										
+									<label>Neurologic</label>
+										<li><input type="checkbox" name="neurologic" id='check-box'>Syncope <i>(Nawalan ng malay)</i></li>
+										<li><input type="checkbox" name="neurologic" id='check-box'>Tremors <i>(Nanginginig)</i></li>
+										<li><input type="checkbox" name="neurologic" id='check-box'>Paralysis <i>(Naparalisa)</i></li>
+										<li><input type="checkbox" name="neurologic" id='check-box'>Numbness <i>(Pamamanhid)</i></li>
+										<li><input type="checkbox" name="neurologic" id='check-box'>Bradykinesia <i>(Mabagal na paggalaw)</i></li>
+										<li><input type="checkbox" name="neurologic" id='check-box' onclick="show57();"/>Pasma</li>
+										<div id="div57" class="hide">
+											<span>Describe Experience <i>(Ilarawan)</i><input type="text" id="duration"></span>
+										</div>
+										<li><input type="checkbox" name="neurologic" id='check-box' onclick="show58();"/>Pangangalay</li>
+										<div id="div58" class="hide">
+											<span>Describe Experience <i>(Ilarawan)</i><input type="text" id="duration"></span>
+										</div>
+										<li><input type="checkbox" name="neurologic" id='check-box'>Other <i>(Iba pa):</i><input type="text" id="duration"></li>
+										<br>
+										
+										<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+										<br>
+										
+									<label>Vision</label>
+										<li>In the past 3 months, have you experiened the following? <i>(Sa nakalipas na tatlong buwan, kayo po ba ay nakaranas ng..)</i></li>
+										<li><input type="checkbox" name="vision" id='check-box' onclick="show59();"/>Blurred <i>(Malabo, maulap, o mausok)</i></li>
+										<div id="div59" class="hide">
+											<p><input type="radio" name="vision" value="" id='radio-btn' onclick="show60();"/>Yes</p>
+											<div id="div60" class="hide">
+												<p><input type="checkbox" name="gvision"id='checkbox-align'/>Eyeglasses <i>(Salamin)</i></p>
+												<p><input type="checkbox" name="gvision"id='checkbox-align'/>Contact Lense</p>
+												<p><input type="checkbox" name="gvision"id='checkbox-align'/>Other: <i>(Iba pa):</i><input type="text" id="duration"></p>
+											</div>
+											<p><input type="radio" name="vision" value="" id='radio-btn'/>No</p>
+										</div>
+										<li><input type="checkbox" name="vision" id='check-box'>Floaters <i>(Bagay na palutang-lutang sa paningin)</i></li>
+										<li><input type="checkbox" name="vision" id='check-box'>Tearing <i>(Nagluluha)</i></li>
+										<li><input type="checkbox" name="vision" id='check-box'>Blind Spots <i>(Mayroong parte na hindi makita)</i></li>
+										<li><input type="checkbox" name="vision" id='check-box'>Photopsia <i>Photopsia (mga gumuguhit na ilaw)</i></li>
+										<li><input type="checkbox" name="vision" id='check-box'>Eye Pain or Heaviness <i>(Masakit o mabigat sa pakiramdam)</i></li>
+										<li><input type="checkbox" name="vision" id='check-box'>Foreign Body Sensation <i>(pakiramdam na may nakapuwing sa mata)</i></li>
+										<li><input type="checkbox" name="vision" id='check-box'>Redness <i>(Namumula)</i></li>
+										<li><input type="checkbox" name="vision" id='check-box'>Glare <i>(nasisilaw)</i></li>
+										<li><input type="checkbox" name="vision" id='check-box'>Itchy <i>(Nangangati)</i></li>
+										<li><input type="checkbox" name="vision" id='check-box'>None <i>(Wala):</i></li>
+										<li><input type="checkbox" name="vision" id='check-box'>Other: <i>(Iba pa):</i><input type="text" id="duration"></li>
+										<br>
+										
+										<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+										<br>
+										
+									<label>Ears and Hearing</label>
+										<li>Do you have a hearing problem? <i>(Kayo po ba ay may problema sa pandinig)</i></li>
+										<li><input type="radio" name="hearing-problem" value="" id='radio-btn' onclick="show61();"/>Yes</li>
+											<div id="div61" class="hide">
+												<p>Do you use hearing aid? <i>(Kayo po ba ay gumagamit ng tulong pandinig)?</i></p>
+												<p><input type="radio" name="hearing-aid" value="" id='radio-btn' onclick="show62();"/>Yes</p>
+												<p><input type="radio" name="hearing-aid" value="" id='radio-btn'/>No</p>
+											</div>
+										<li><input type="radio" name="hearing-problem" value="" id='radio-btn'/>No</li>
+										<br>
+										
+										<li>In the past 3 months, have you experiened the following?<i> (Sa nakalipas na tatlong buwan, kayo po ba ay nakaranas ng..)</i></li>
+										<li><input type="checkbox" name="ears-hearing" id='check-box'>Tinnitus <i>(Tinnitus o may umuugong sa tenga)</i></li>
+										<li><input type="checkbox" name="ears-hearing" id='check-box'>Ear Discharge <i>(May lumalabas sa tenga)</i></li>
+										<li><input type="checkbox" name="ears-hearing" id='check-box'>Ear Pain <i>(Masakit ang tenga)</i></li>
+										<li><input type="checkbox" name="ears-hearing" id='check-box'>Itchiness <i>(Pangangati)</i></li>
+										<li><input type="checkbox" name="ears-hearing" id='check-box'>None <i>(Wala)</i></li>
+										<li><input type="checkbox" name="ears-hearing" id='check-box'>Other <i>(Iba pa):</i><input type="text" id="duration"></li>
+										<br>
+										
+										<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+										<br>
+										
+									<label>Balance</label>
+										<li>In the past 3 months, have you experiened the following? <i>(Sa nakalipas na tatlong buwan, kayo po ba ay nakaranas ng..)</i></li> 
+										<li><input type="checkbox" name="balance" id='check-box'>Dizziness <i>(nahihilo)</i></li>
+										<li><input type="checkbox" name="balance" id='check-box'>Imbalance or disequilibrium <i>(parang natutumba o diniduyan)</i></li>
+										<li><input type="checkbox" name="balance" id='check-box'>Vertigo <i>(naliliyo o umiikot ka o ang paligid)</i></li>
+										<li><input type="checkbox" name="balance" id='check-box'>None <i>(Wala)</i></li>
+										<li><input type="checkbox" name="balance" id='check-box'>Other: <i>(Iba pa):</i><input type="text" id="duration"></li>
+										<br>
+										
+										<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+										<br>
+										
+									<label>Cardiac</label>
+										<li>In the past 3 months, have you experiened the following? <i>(Sa nakalipas na tatlong buwan, kayo po ba ay nakaranas ng..)</i></li> 
+										<li><input type="checkbox" name="cardiac" id='check-box'>Palpitations <i>(nakakaramdam ng palpitasyon)</i></li>
+										<li><input type="checkbox" name="cardiac" id='check-box'>Dyspnea <i>(nahihirapan sa paghinga)</i></li>
+										<li><input type="checkbox" name="cardiac" id='check-box'>Orthopneea <i>(Ortopniya o parang nalulunod sa tuwing nakahiga)</i></li>
+										<li><input type="checkbox" name="cardiac" id='check-box'>Chest Pain <i>(Pananakit ng dibdib)</i></li>
+										<li><input type="checkbox" name="cardiac" id='check-box'>East Fatigability <i>(Madaling mapagod)</i></li>
+										<li><input type="checkbox" name="cardiac" id='check-box'>Pedal Edema <i>(Namamanas ang paa)</i></li>
+										<li><input type="checkbox" name="cardiac" id='check-box'>None <i>(Wala)</i></li>
+										<li><input type="checkbox" name="cardiac" id='check-box'>Other: <i>(Iba pa):</i><input type="text" id="duration"></li>
+										<br>
+										
+										<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+										<br>
+										
+									<label>Speech/Language</label>
+										<li>In the past 3 months, have you experiened the following? <i>(Sa nakalipas na tatlong buwan, kayo po ba ay nakaranas ng..)</i></li> 
+										<li><input type="checkbox" name="speech" id='check-box'>Slurred Speach <i>(Nabubulol)</i></li>
+										<li><input type="checkbox" name="speech" id='check-box'>Dysarthia <i>(Hirap sa pagsasalita)</i></li>
+										<li><input type="checkbox" name="speech" id='check-box'>None <i>(Wala)</i></li>
+										<li><input type="checkbox" name="speech" id='check-box'>Other <i>(Iba pa):</i><input type="text" id="duration"></li>
+										<br>
+										
+										<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+										<br>
+										
+									<label>Musculoskeletal</label>
+										<li>In the past 3 months, have you experiened the following? <i>(Sa nakalipas na tatlong buwan, kayo po ba ay nakaranas ng..)</i></li>
+										<li><input type="checkbox" name="musculoskeletal" id='check-box'>Arthritis</li>
+										<li><input type="checkbox" name="musculoskeletal" id='check-box'>"Rayuma"</li>
+										<li><input type="checkbox" name="musculoskeletal" id='check-box'>Musculoskeletal Pain <i>pain (Sakit sa buto o kalamnan)</i></li>
+										<li><input type="checkbox" name="musculoskeletal" id='check-box'>Muscle Wasting/Atrophy <i>(nangunguluntoy ang kalamnan)</i></li>
+										<li><input type="checkbox" name="musculoskeletal" id='check-box'>Increase Muscle Tone/Stiffness</li>
+										<li><input type="checkbox" name="musculoskeletal" id='check-box'>None <i>(Wala)</i></li>
+										<li><input type="checkbox" name="musculoskeletal" id='check-box'>Other <i>(Iba pa):</i><input type="text" id="duration"></li>
+										<br>
+										
+										<li>Do you experience joint pain? <i>(Nanakit ang mga kasu-kasuan):</i></li>
+										<li><input type="radio" name="hearing-problem" value="" id='radio-btn' onclick="show63();"/>Yes</li>
+											<div id="div63" class="hide">
+												<p>Where do you experience it?</p>
+												<p><input type="checkbox" name="joint-pain" id='check-box'>Neck</p>
+												<p><input type="checkbox" name="joint-pain" id='check-box'>Back</p>
+												<p><input type="checkbox" name="joint-pain" id='check-box'>Hip</p>
+												<p><input type="checkbox" name="musculoskeletal" id='check-box'>Other <i>(Iba pa):</i><input type="text" id="duration"></p>
+											</div>
+										<li><input type="radio" name="hearing-problem" value="" id='radio-btn'/>No</li>
+										<br>
+										
+										<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
+										<br>
+										
+									<label>Activities of Daily Living</label>
+										<table id="column">
+											<tr>
+												<th>Activity</th>
+												<th>Independent</th>
+												<th>Dependent</th>
+											</tr>
+											<tr>
+												<td></td>
+												<td><p>(Without supervision, direction, or personal assistance)</p></td>
+												<td><p>(With supervision, direction, or personal assistance)</p></td>
+											</tr>
+											<tr>
+												<td>Bathing <i>(Pagligo)</i></td>
+												<td align="center"><input type="radio" name="bathing" value="Accept" id='a'/></td>
+												<td align="center"><input type="radio" name="bathing" value="Reject" id='b'/></td>
+											</tr>
+											<tr>
+												<td>Dressing <i>(Pagbihis)</i></td>
+												<td align="center"><input type="radio" name="dressing" value="Accept" id='c'/></td>
+												<td align="center"><input type="radio" name="dressing" value="Reject" id='d'/></td>
+											</tr>
+											<tr>
+												<td>Toileting <i>(Pagbanyo)</i></td>
+												<td align="center"><input type="radio" name="toileting" value="Accept" id='e'/></td>
+												<td align="center"><input type="radio" name="toileting" value="Accept" id='f'/></td>
+											</tr>
+											<tr>
+												<td>Transfers <i>(Pagbangon)</i></td>
+												<td align="center"><input type="radio" name="transfers" value="Accept" id='g'/></td>
+												<td align="center"><input type="radio" name="transfers" value="Reject" id='h'/></td>
+											</tr>
+											<tr>
+												<td>Continence <i>(Pagpigil sa ihi o dumi)</i></td>
+												<td align="center"><input type="radio" name="continence" value="Accept" id='i'/></td>
+												<td align="center"><input type="radio" name="continence" value="Reject" id='j'/></td>
+											</tr>
+											<tr>
+												<td>Feeding <i>(Pagkain)</i></td>
+												<td align="center"><input type="radio" name="feeding" value="Accept" id='k'/></td>
+												<td align="center"><input type="radio" name="feeding" value="Reject" id='l'/></td>
+											</tr>
+										</table>
+										
+										<li>Activities of Daily Living (ADL) Score:<span class="counter" name="Activities of Daily Living"></span></li>
+										<br>
+										
+									<label>Instrumental Activities of Daily Living</label>
+										<table id="column">
+											<tr>
+												<th>Activity</th>
+												<th>Independent</th>
+												<th>Dependent</th>
+											</tr>
+											<tr>
+												<td></td>
+												<td><p>(Without supervision, direction, or personal assistance)</p></td>
+												<td><p>(With supervision, direction, or personal assistance)</p></td>
+											</tr>
+											<tr>
+												<td>Using Telephone <i>(Paggamit ng telepono)</i></td>
+												<td align="center"><input type="radio" name="Using Telephone" value="Accept" id='a'/></td>
+												<td align="center"><input type="radio" name="Using Telephone" value="Reject" id='b'/></td>
+											</tr>
+											<tr>
+												<td>Shopping <i>(Pamimili)</i></td>
+												<td align="center"><input type="radio" name="Shopping" value="Accept" id='c'/></td>
+												<td align="center"><input type="radio" name="Shopping" value="Reject" id='d'/></td>
+											</tr>
+											<tr>
+												<td>Food Preparation <i>(Paghanda ng pagkain)</i></td>
+												<td align="center"><input type="radio" name="Food Preparation" value="Accept" id='e'/></td>
+												<td align="center"><input type="radio" name="Food Preparation" value="Reject" id='f'/></td>
+											</tr>
+											<tr>
+												<td>Housekeeping <i>(Pag-ayos o paglinis sa bahay)</i></td>
+												<td align="center"><input type="radio" name="Housekeeping" value="Accept" id='g'/></td>
+												<td align="center"><input type="radio" name="Housekeeping" value="Reject" id='h'/></td>
+											</tr>
+											<tr>
+												<td>Laundry <i>(Paglalaba)</i></td>
+												<td align="center"><input type="radio" name="Laundry" value="Accept" id='i'/></td>
+												<td align="center"><input type="radio" name="Laundry" value="Reject" id='j'/></td>
+											</tr>
+											<tr>
+												<td>Transportation <i>(Pagsakay)</i></td>
+												<td align="center"><input type="radio" name="Transportation" value="Accept" id='k'/></td>
+												<td align="center"><input type="radio" name="Transportation" value="Reject" id='l'/></td>
+											</tr>
+											<tr>
+												<td>Taking Medicine <i>(Pag-inom ng gamot)</i></td>
+												<td align="center"><input type="radio" name="Taking Medicine" value="Accept" id='m'/></td>
+												<td align="center"><input type="radio" name="Taking Medicine" value="Reject" id='n'/></td>
+											</tr>
+											<tr>
+												<td>Managing Money <i>(Pangangalaga, pangangasiwa, o pamamahala ng pera)</i></td>
+												<td align="center"><input type="radio" name="Managing Money" value="Accept" id='o'/></td>
+												<td align="center"><input type="radio" name="Managing Money" value="Reject" id='p'/></td>
+											</tr>
+										</table>
+										
+										<li>Instrumental Activities of Daily Living (IADL) Score:<span class="counter"></span></li>
+										<br>
 								</div>
-								<li><input type="checkbox" name="neurologic" id='check-box' onclick="show58();"/>Pangangalay</li>
-								<div id="div58" class="hide">
-									<span>Describe Experience:<input type="text" id="duration"></span>
-								</div>
-								<li><input type="checkbox" name="neurologic" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-								
-							<label>Vision</label>
-								<li>In the past 3 months, have you experiened the following?</li>
-								<li><input type="checkbox" name="vision" id='check-box' onclick="show59();"/>Blurred</li>
-								<div id="div59" class="hide">
-									<p><input type="radio" name="vision" value="" id='radio-btn' onclick="show60();"/>Yes</p>
-									<div id="div60" class="hide">
-										<p><input type="checkbox" name="gvision"id='checkbox-align'/>Eyeglasses</p>
-										<p><input type="checkbox" name="gvision"id='checkbox-align'/>Contact Lense</p>
-										<p><input type="checkbox" name="gvision"id='checkbox-align'/>Other:<input type="text" id="duration"></p>
-									</div>
-									<p><input type="radio" name="vision" value="" id='radio-btn'/>No</p>
-								</div>
-								<li><input type="checkbox" name="vision" id='check-box'>Floaters</li>
-								<li><input type="checkbox" name="vision" id='check-box'>Tearing</li>
-								<li><input type="checkbox" name="vision" id='check-box'>Blind Spots</li>
-								<li><input type="checkbox" name="vision" id='check-box'>Photopsia</li>
-								<li><input type="checkbox" name="vision" id='check-box'>Eye Pain or Heaviness</li>
-								<li><input type="checkbox" name="vision" id='check-box'>Foreign Body Sensation</li>
-								<li><input type="checkbox" name="vision" id='check-box'>Redness</li>
-								<li><input type="checkbox" name="vision" id='check-box'>Glare</li>
-								<li><input type="checkbox" name="vision" id='check-box'>Itchy</li>
-								<li><input type="checkbox" name="vision" id='check-box'>None</li>
-								<li><input type="checkbox" name="vision" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-								
-							<label>Ears and Hearing</label>
-								<li>Do you have a hearing problem?</li>
-								<li><input type="radio" name="hearing-problem" value="" id='radio-btn' onclick="show61();"/>Yes</li>
-									<div id="div61" class="hide">
-										<p>Do you use hearing aid?</p>
-										<p><input type="radio" name="hearing-aid" value="" id='radio-btn' onclick="show62();"/>Yes</p>
-										<p><input type="radio" name="hearing-aid" value="" id='radio-btn'/>No</p>
-									</div>
-								<li><input type="radio" name="hearing-problem" value="" id='radio-btn'/>No</li>
-								<br>
-								
-								<li>In the past 3 months, have you experiened the following?</li> 
-								<li><input type="checkbox" name="ears-hearing" id='check-box'>Tinnitus</li>
-								<li><input type="checkbox" name="ears-hearing" id='check-box'>Ear Discharge</li>
-								<li><input type="checkbox" name="ears-hearing" id='check-box'>Ear Pain</li>
-								<li><input type="checkbox" name="ears-hearing" id='check-box'>Itchiness</li>
-								<li><input type="checkbox" name="ears-hearing" id='check-box'>None</li>
-								<li><input type="checkbox" name="ears-hearing" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-								
-							<label>Balance</label>
-								<li>In the past 3 months, have you experiened the following?</li> 
-								<li><input type="checkbox" name="balance" id='check-box'>Dizziness</li>
-								<li><input type="checkbox" name="balance" id='check-box'>Imbalance or disequilibrium</li>
-								<li><input type="checkbox" name="balance" id='check-box'>Vertigo</li>
-								<li><input type="checkbox" name="balance" id='check-box'>None</li>
-								<li><input type="checkbox" name="balance" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-								
-							<label>Cardiac</label>
-								<li>In the past 3 months, have you experiened the following?</li> 
-								<li><input type="checkbox" name="cardiac" id='check-box'>Palpitations</li>
-								<li><input type="checkbox" name="cardiac" id='check-box'>Dyspnea</li>
-								<li><input type="checkbox" name="cardiac" id='check-box'>Orthopneea</li>
-								<li><input type="checkbox" name="cardiac" id='check-box'>Chest Pain</li>
-								<li><input type="checkbox" name="cardiac" id='check-box'>East Fatigability</li>
-								<li><input type="checkbox" name="cardiac" id='check-box'>Pedal Edema</li>
-								<li><input type="checkbox" name="cardiac" id='check-box'>None</li>
-								<li><input type="checkbox" name="cardiac" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-								
-							<label>Speech/Language</label>
-								<li>In the past 3 months, have you experiened the following?</li> 
-								<li><input type="checkbox" name="speech" id='check-box'>Slurred Speach</li>
-								<li><input type="checkbox" name="speech" id='check-box'>Dysarthia</li>
-								<li><input type="checkbox" name="speech" id='check-box'>None</li>
-								<li><input type="checkbox" name="speech" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-								
-							<label>Musculoskeletal</label>
-								<li>In the past 3 months, have you experiened the following?</li>
-								<li><input type="checkbox" name="musculoskeletal" id='check-box'>Arthritis</li>
-								<li><input type="checkbox" name="musculoskeletal" id='check-box'>"Rayuma"</li>
-								<li><input type="checkbox" name="musculoskeletal" id='check-box'>Musculoskeletal Pain</li>
-								<li><input type="checkbox" name="musculoskeletal" id='check-box'>Muscle Wasting/Atrophy</li>
-								<li><input type="checkbox" name="musculoskeletal" id='check-box'>Increase Muscle Tone/Stiffness</li>
-								<li><input type="checkbox" name="musculoskeletal" id='check-box'>None</li>
-								<li><input type="checkbox" name="musculoskeletal" id='check-box'>Other:<input type="text" id="duration"></li>
-								<br>
-								
-								<li>Do you experience joint pain?</li>
-								<li><input type="radio" name="hearing-problem" value="" id='radio-btn' onclick="show63();"/>Yes</li>
-									<div id="div63" class="hide">
-										<p>Where do you experience it?</p>
-										<p><input type="checkbox" name="joint-pain" id='check-box'>Neck</p>
-										<p><input type="checkbox" name="joint-pain" id='check-box'>Back</p>
-										<p><input type="checkbox" name="joint-pain" id='check-box'>Hip</p>
-										<p><input type="checkbox" name="musculoskeletal" id='check-box'>Other:<input type="text" id="duration"></p>
-									</div>
-								<li><input type="radio" name="hearing-problem" value="" id='radio-btn'/>No</li>
-								<br>
-								
-								<li>Describe illness/es that you have experienced or observed.<input type="text" id="duration"></li>
-								<br>
-								
-							<label>Activities of Daily Living</label>
-								<table id="column">
-									<tr>
-										<th>Activity</th>
-										<th>Independent</th>
-										<th>Dependent</th>
-									</tr>
-									<tr>
-										<td></td>
-										<td><p>(Without supervision, direction, or personal assistance)</p></td>
-										<td><p>(With supervision, direction, or personal assistance)</p></td>
-									</tr>
-									<tr>
-										<td>Bathing</td>
-										<td align="center"><input type="radio" name="bathing" value="Accept" id='a'/></td>
-										<td align="center"><input type="radio" name="bathing" value="Reject" id='b'/></td>
-									</tr>
-									<tr>
-										<td>Dressing</td>
-										<td align="center"><input type="radio" name="dressing" value="Accept" id='c'/></td>
-										<td align="center"><input type="radio" name="dressing" value="Reject" id='d'/></td>
-									</tr>
-									<tr>
-										<td>Toileting</td>
-										<td align="center"><input type="radio" name="toileting" value="Accept" id='e'/></td>
-										<td align="center"><input type="radio" name="toileting" value="Accept" id='f'/></td>
-									</tr>
-									<tr>
-										<td>Transfers</td>
-										<td align="center"><input type="radio" name="transfers" value="Accept" id='g'/></td>
-										<td align="center"><input type="radio" name="transfers" value="Reject" id='h'/></td>
-									</tr>
-									<tr>
-										<td>Continence</td>
-										<td align="center"><input type="radio" name="continence" value="Accept" id='i'/></td>
-										<td align="center"><input type="radio" name="continence" value="Reject" id='j'/></td>
-									</tr>
-									<tr>
-										<td>Feeding</td>
-										<td align="center"><input type="radio" name="feeding" value="Accept" id='k'/></td>
-										<td align="center"><input type="radio" name="feeding" value="Reject" id='l'/></td>
-									</tr>
-								</table>
-								
-								<li>Activities of Daily Living (ADL) Score:<span class="counter" name="Activities of Daily Living"></span></li>
-								<br>
-								
-							<label>Instrumental Activities of Daily Living</label>
-								<table id="column">
-									<tr>
-										<th>Activity</th>
-										<th>Independent</th>
-										<th>Dependent</th>
-									</tr>
-									<tr>
-										<td></td>
-										<td><p>(Without supervision, direction, or personal assistance)</p></td>
-										<td><p>(With supervision, direction, or personal assistance)</p></td>
-									</tr>
-									<tr>
-										<td>Using Telephone</td>
-										<td align="center"><input type="radio" name="Using Telephone" value="Accept" id='a'/></td>
-										<td align="center"><input type="radio" name="Using Telephone" value="Reject" id='b'/></td>
-									</tr>
-									<tr>
-										<td>Shopping</td>
-										<td align="center"><input type="radio" name="Shopping" value="Accept" id='c'/></td>
-										<td align="center"><input type="radio" name="Shopping" value="Reject" id='d'/></td>
-									</tr>
-									<tr>
-										<td>Food Preparation</td>
-										<td align="center"><input type="radio" name="Food Preparation" value="Accept" id='e'/></td>
-										<td align="center"><input type="radio" name="Food Preparation" value="Reject" id='f'/></td>
-									</tr>
-									<tr>
-										<td>Housekeeping</td>
-										<td align="center"><input type="radio" name="Housekeeping" value="Accept" id='g'/></td>
-										<td align="center"><input type="radio" name="Housekeeping" value="Reject" id='h'/></td>
-									</tr>
-									<tr>
-										<td>Laundry</td>
-										<td align="center"><input type="radio" name="Laundry" value="Accept" id='i'/></td>
-										<td align="center"><input type="radio" name="Laundry" value="Reject" id='j'/></td>
-									</tr>
-									<tr>
-										<td>Transportation</td>
-										<td align="center"><input type="radio" name="Transportation" value="Accept" id='k'/></td>
-										<td align="center"><input type="radio" name="Transportation" value="Reject" id='l'/></td>
-									</tr>
-									<tr>
-										<td>Taking Medicine</td>
-										<td align="center"><input type="radio" name="Taking Medicine" value="Accept" id='m'/></td>
-										<td align="center"><input type="radio" name="Taking Medicine" value="Reject" id='n'/></td>
-									</tr>
-									<tr>
-										<td>Managing Money</td>
-										<td align="center"><input type="radio" name="Managing Money" value="Accept" id='o'/></td>
-										<td align="center"><input type="radio" name="Managing Money" value="Reject" id='p'/></td>
-									</tr>
-								</table>
-								
-								<li>Instrumental Activities of Daily Living (IADL) Score:<span class="counter"></span></li>
-								<br>
-						</div>
-					</div>
+							</div>
 					<div class="buttons">
 						<button type="button" class="previous-btn">Back Page</button>
 						<button type="button" class="save-btn">Save as Draft</button>
@@ -1800,7 +1802,7 @@
                             </select>
 						</div>
 						<div class="input-components">
-							<label>Relationship to Patient <i>(Relasyon sa Pasyente)<span id="required">*</span></label>
+							<label>Relationship to Patient <i>(Relasyon sa Pasyente)</i><span id="required">*</span></label>
 							<select id="components">
 								<option>Family Member</option>
 								<option>Nurse</option>
@@ -1936,7 +1938,7 @@
                             </select>
 						</div>
 						<div class="input-components">
-							<label>Relationship to Patient <i>(Relasyon sa Pasyente)<span id="required">*</span></label>
+							<label>Relationship to Patient <i>(Relasyon sa Pasyente)</i><span id="required">*</span></label>
 							<select id="components">
 								<option>Family Member</option>
 								<option>Nurse</option>
