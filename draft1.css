@@ -1,0 +1,436 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.logo img {
+	width: 50px;
+	height: 30%;
+	margin-top: 10px;
+}
+header {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	margin-top: 0;
+	background: #014421;
+	padding: 1rem;
+	color: white;
+	width: 78rem;
+}
+.navigation-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+    margin-bottom: 50px;
+  background-image: url(https://lh6.googleusercontent.com/_y7nnL5sg9GjwVFDi8Qzi04MDovQWtKJHYbEXhw_vD6-_IuPvmWDVqgrQzv4eLBYZPjRg7nxVAm94UkcCoW7naf8c_X0MQMZKT8NpH1MuPFs06kjJxhlRNm5-5eUTD-UrndghkvGxOeapyQ9AwBD8X4m9bwovnAugvxRfOWKOEF49VJa_YxYUIqRxpSfkOtf);
+}
+
+.navigation-bar li {
+  float: right;
+}
+
+.navigation-bar li a {
+  display: flex;
+  color: white;
+  text-align: left;
+  padding: 20px;
+  text-decoration: none;
+  width: 100%;
+  font-size: 15px;
+}
+.navigation-bar li a:hover{
+	color: #1d8348;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+.container form{
+    position: relative;
+	min-height: 100vh;
+	height: 100%;
+    background: transparent;
+}
+.container form .form{
+    position: absolute;
+    background: transparent;
+	padding: 40px;
+	margin: 10px;
+}
+.container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+form.secActive .form.second{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+form.secActive .form.first{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 2 - 50px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label{
+    font-size: 15px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.patient-id {
+	text-align: right;
+}
+.idDetails label {
+	font-size: 14px;
+	font-weight: 500;
+	text-align: right;
+}
+#id {
+	border: 1px solid #aaa;
+}
+.component-details {
+	text-align: left;
+}
+.component-details label {
+	font-size: 14px;
+	font-weight: 500;
+}
+#components {
+	background: white;
+	border: 1px solid #B0BEC5;
+	border-radius: 5px;
+	font-size: 14px;
+	width: 15%;
+	padding: .5rem;
+}
+#choices {
+    margin-left: 0.7rem;
+}
+#activities {
+    margin-left: 3rem;
+}
+#comment {
+	border: none;
+	border-bottom: 1px solid black;
+	width: 100%;
+}
+.address-details {
+	margin-top: 2rem;
+	font-size: 16px;
+	font-weight: 700;
+}
+.input-field input[type=text], input[type=date], input[type=time], input[type=tel], select{
+	background: none;
+	outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input :focus,
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field select,
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+.input li {
+  list-style-type: none;
+}
+.input label {
+	font-size: 18px;
+	font-weight: 700;
+    color: black;
+}
+.fields .input span {
+	margin-left: 37px;
+}
+.fields .input p {
+	margin-left: 20px;
+	font-size: 13px;
+}
+.fields .input input[type=number] {
+	border: none;
+	border-bottom: 1px solid black;
+	margin-left: 0.3rem;
+}
+.container form .buttons .saveBtn, .nextBtn {
+	background: #ffeb2f;
+}
+.container form .buttons .nextBtn {
+	background: #014421;
+}
+.container form .buttons .nextBtn:hover {
+	background: #1d8348;
+}
+.container form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 170px;
+    width: 200px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    background: #7b1113;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.container form button:hover{
+    background: #b03a2e;
+}
+.container form .btnText{
+    font-size: 14px;
+    font-weight: 400;
+}
+form button:hover{
+    background-color: #B03A2E;
+}
+form button i,
+form .backBtn i{
+    margin: 0 6px;
+}
+form .backBtn i{
+    transform: rotate(180deg);
+}
+form .buttons{
+    display: flex;
+    align-items: center;
+	
+}
+form .buttons button , .backBtn{
+    margin-right: 14px;
+}
+form .appointment-list {
+    margin-top: 50px;
+}
+form .patient-list tr th{
+    border: 1px solid #BDBDBD;
+    padding: 10px;
+    
+}
+#radio-btn {
+	margin-top: 0.5rem;
+	margin-left: 1rem;
+	margin-right: 0.5rem;
+}
+#check-box {
+	margin-top: 0.5rem;
+	margin-left: 1rem;
+	margin-right: 0.5rem;
+}
+.hide {
+	display: none;
+}
+#duration {
+	border: none;
+	border-bottom: 1px solid black;
+	margin-left: 5px;
+}
+#required {
+	color: red;
+}
+#patient-list {
+	display: flex;
+}
+#warning {
+	color: red;
+	font-size: 14px;
+	font-weight: 700;
+}
+.table {
+	width: 80%;
+}
+.table {
+	border: pink;
+}
+.table.list {
+	width: 100%;
+}
+.td, th {
+	border: 1px solid orange;
+	text-align: left;
+	padding: 8px;
+}
+#column th {
+  text-align: center;
+  padding-left: 4rem;
+  padding-right: 2rem;
+  border: none;
+  font-size: 15px;
+  background: none;
+  color: black;
+}
+#column td {
+    font-size: 14px;
+	padding-left: 1.7rem;
+}
+#input-text {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 70%;
+    margin-left: 1rem;
+}
+/* disease condition start styling*/
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.diseases-condition .diseases-content{
+    display: flex;
+}
+.diseases-condition .diseases-content .left {
+	width: 50%;
+	margin-top: 200px;
+}
+.diseases-condition .diseases-content .left .main-title{
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+.diseases-condition .diseases-content .right{
+    width: 50%;
+	margin-top: 50px;
+}
+.diseases-condition .diseases-content .right-column-feautured-title{
+    font-size: 25px;
+    font-weight: 400;
+	border-bottom: 1px solid black;
+	display: flex;
+}
+.diseases-condition .diseases-content .right .content-list {
+    background: white;
+	margin-top: 20px;
+}
+.diseases-condition .diseases-content .right li {
+    display: inline-block;
+    background: none;
+    font-size: 14px;
+	margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid black;
+	margin-left: 5px;
+}
+.diseases-condition .diseases-content .right li:hover {
+	background: black;
+	color: white;
+}
+.diseases-condition .diseases-content .right li a {
+	text-decoration: none;
+	color: black;
+}
+.diseases-condition .diseases-content .right li a:hover {
+	color: white;
+}
+.button-more {
+	margin-top: 30px;
+	border-top: 1px solid black;
+	display: flex;
+	justify-content: space-between;
+	padding: 16px 0;
+	line-height: 27px;
+	color: black;
+	font-size: 15px;
+}
+.button-more:hover {
+	text-decoration: underline;
+}
+hr {
+	border-bottom: 1px solid gray;
+}
+#height, #weight {
+	border: none;
+	border-bottom: 1px solid black;
+	margin-left: 0.5rem;
+}
+#heightunits, #weightunits {
+	background: none;
+	border: none;
+	padding: 0;
+	font-size: 15px;
+}
+#bmi-submit-btn {
+	width: 30%;
+	padding: 0.5rem;
+	border: none;
+	background: maroon;
+	color: white;
+	cursor: pointer;
+}
+#bmi-submit-btn:hover{
+	background: #b03a2e;
+}
+@media (max-width: 947px){
+    form .diseases-condition .diseases-content .column{
+        width: 100%;
+    }
+    form .diseases-condition .diseases-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    form .diseases-condition .diseases-content .right{
+        flex: 100%;
+    }
+}
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field, .input{
+        width: calc(100% / 2 - 15px);
+    }
+    
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field, .input, #id, #components{
+        width: 100%;
+    }
+    form .diseases-condition .diseases-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+}
+
+

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(https://lh6.googleusercontent.com/_y7nnL5sg9GjwVFDi8Qzi04MDovQWtKJHYbEXhw_vD6-_IuPvmWDVqgrQzv4eLBYZPjRg7nxVAm94UkcCoW7naf8c_X0MQMZKT8NpH1MuPFs06kjJxhlRNm5-5eUTD-UrndghkvGxOeapyQ9AwBD8X4m9bwovnAugvxRfOWKOEF49VJa_YxYUIqRxpSfkOtf);
+  background-size: cover;
+}
+ 
+.container {
+  margin-top: 30px;
+  width: 350px;
+  background: white;
+  opacity: 90%;
+  text-align: left;
+  border-radius: 15px;
+  padding: 20px 30px 0px 30px;
+  color: black;
+  
+}
+.form .imgcontainer {
+  text-align: center;
+}
+.formGroup type{
+	color: white;
+}
+img.logo {
+  width: 40%;
+  border-radius: 50%;
+}
+.btn button {
+  padding: 3px;
+  margin: 10px 10px 30px 68px;
+  border-style: none;
+  background-color: transparent;
+  color: #1d8348;
+  font-size: 18px;
+  font-weight: 550;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px 10px;
+  margin-bottom: 8px;
+  display: inline-block;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+#required {
+	color: red;
+    margin-left: 2px;
+}
+input:focus {
+  outline: none !important;
+  border-bottom: 2px solid #1d8348;
+  font-size: 13px;
+  color: black;
+}
+.text{
+  color: black;
+  font-size: 13px;
+  margin-left: 60px;
+}
+.text a {
+	margin-left: 3px;
+	color: #7b1113;
+}
+.btn2{
+  background: #014421;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.btn2:hover{
+  opacity: 0.8;
+  background: #196F3D;
+}
+.btn button:hover{
+  border-bottom: 2px solid #ffeb2f;
+}
+.btn2 a {
+	 text-decoration: none;
+	 color: white;
+	 font-size: 15px;
+ }
+/* hide signup form */
+.login{
+  display: none;
+}
+ 
+/* Login form code */
+.login{
+  display: none;
+}
